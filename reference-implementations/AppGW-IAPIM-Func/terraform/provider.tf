@@ -1,6 +1,9 @@
 terraform {
 
   backend "azurerm" {
+    storage_account_name = "TFSTATE-RG"
+    container_name       = "tfstateijm160323"
+    key                  = "tfstate"
     # ----------------------
     # Will be passing in these arguments via CLI as the state file \
     #  is now being overwritten via local testing environments
